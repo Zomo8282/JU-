@@ -1,0 +1,30 @@
+max([A],A).
+max([H|R],N):-max(R,RN),
+N is max(H,RN).
+
+min([A],A).
+min([H|R],N):- min(R,RN),
+N is  min(H,RN).
+
+count([],X,0).
+count([X|T],X,Y):-count(T,X,Z),Y is Z+1.
+count([_|T],X,Z):-count(T,X,Z).
+
+
+rvi((write([])),Z,Z).
+rvi([H|T],Z,X):-rv(T,Z,[H|X]).
+
+del(X,[X|T],T).
+del(X,[H|T],[H|T1]):-del(X,T,T1).
+
+abs(X,Y):- X<0, Y is -X.
+abs(X,X):- X>=0, !.
+
+even(X):- X mod 2=:=0 .
+
+
+rev(([]),Z,Z).
+rev([H|T],Z,X):-rv(T,Z,[H|X]).
+
+
+

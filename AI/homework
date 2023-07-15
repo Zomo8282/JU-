@@ -1,0 +1,10 @@
+parent(ali,ahmad).
+parent(ahmad,salem).
+parent(ali,fatema).
+parent(fatema,osama).
+male(ali).
+male(ahmad).
+male(osama).
+male(salem).
+female(fatema).
+
