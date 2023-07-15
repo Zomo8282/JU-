@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 10.7: RandomPicture2.html -->
+<!-- Random image generation using arrays. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Random Image Generator</title> 
+      <style type = "text/css">
+         table { width: 15em }
+         th    { text-align: left }
+      </style>	
+      <script type = "text/javascript">
+
+	images = new Array(4);
+	images[0] = '1.jpg';
+	images[1] = '2.jpg';
+	images[2] = 'nTierArch.jpg';
+	images[3] = 'cis1111.jpg';
+
+    pic1 = new Image(250,213); 
+	var image_index = 0;
+
+    for(image_index =0; image_index <=3; image_index ++) 
+        pic1.src = images[image_index];
+
+	image_index=0;
+	var timerID = self.setTimeout("rotate_image()", 2000)
+
+	function rotate_image()
+	{
+		image_index = Math.floor( Math.random() * 4 ) ;
+		document.rotateImage.src = images[image_index];
+		timerID = self.setTimeout("rotate_image()", 2000)
+	}
+ </script>
+   </head>
+   <body>
+	<img src="1.jpg" id="rotateImage" name="rotateImage"/>
+      <p>Click Refresh (or Reload) to run the script again</p>
+   </body>
+</html>
+

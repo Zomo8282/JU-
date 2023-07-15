@@ -1,0 +1,46 @@
+<html>
+
+	<head>
+
+		<script type="text/javascript">
+
+			function calc()
+			{
+				var aa= parseFloat(document.getElementById("f1").T4.value);
+				var bb= parseFloat(document.getElementById("f1").T5.value);
+				var cc= parseFloat(document.getElementById("f1").T6.value);
+				meat=chicken=salad=0;
+				
+				if (document.getElementById("f1").C1.checked)
+					meat=aa * 2.5;
+				if (document.getElementById("f1").C2.checked)
+					chicken=bb * 1.5 ;
+				if (document.getElementById("f1").C3.checked)
+					salad= cc * 0.8;
+
+				s2= meat+chicken+salad;
+
+				document.getElementById("f1").T7.value=s2;
+
+			}
+		</script>
+	</head>
+	<body>
+
+		<form id="f1"action="">
+
+			<input type="checkbox" name="C1" />Meat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" name="T4" size="7" /> </br>
+
+			<input type="checkbox" name="C2" />Chicken &nbsp;&nbsp;&nbsp;
+			<input type="text" name="T5" size="7" /> </br>
+
+			<input type="checkbox" name="C3" />Salad &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" name="T6" size="7" /> </br>
+
+			<input name="B1" type="button" onclick=calc() value="Total Cost" />
+			<input type="text" name="T7" size="20" />&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="Clear all" name="B2" />
+
+	</body>
+</html>

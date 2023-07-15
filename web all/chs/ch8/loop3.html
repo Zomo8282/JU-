@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 7.11: analysis.html -->
+<!-- Examination-results calculation. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Analysis of Examination Results</title>
+      <script type = "text/javascript">
+         <!--
+         // initializing variables in declarations
+         var passes = 0; // number of passes    
+         var failures = 0; // number of failures
+         var student = 1; // student counter    
+         var result; // one exam result         
+
+         // process 10 students; counter-controlled loop
+         while ( student <= 10)
+         {
+            result = window.prompt( "Enter result (1=pass,2=fail)", "0" );
+            if ( result == "1" )       
+               passes++;  // passes = passes +1;    
+            else                       
+               failures += 1;  // failures = failures + 1;
+
+            student += 1;
+         } // end while
+
+         // termination phase    
+         document.writeln( "<h1>Examination Results</h1>" );
+         document.writeln( 
+            "Passed: " + passes + "<br />Failed: " + failures );
+
+         if ( passes > 8 )                            
+            document.writeln( "<br />Raise Tuition" );
+         // -->
+      </script>
+   </head>
+   <body>
+      <p>Click Refresh (or Reload) to run the script again</p>
+   </body>
+</html>
+

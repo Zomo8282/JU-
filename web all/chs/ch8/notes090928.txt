@@ -1,0 +1,34 @@
+
+	grade = 75;
+	if (grade >= 60)
+	{
+		if (grade >= 90) // Nested If statement
+			alert ("Passed with flying colors");
+	}
+	else
+		alert ("Failed");	
+
+	if (c > 10)
+	{
+		alert("");
+
+	}
+	
+	alert (grade >= 60 ? "Passed" : "Failed");
+
+
+	var name = "";
+	var num = 0;
+
+
+	if (name)
+		alert (name);
+
+
+	if (input == 1)
+		passes++;
+	else 
+		if (input == 2)
+			failures++;
+		else
+		

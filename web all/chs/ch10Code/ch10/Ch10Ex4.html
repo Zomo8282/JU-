@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 10.6: RollDie.html -->
+<!-- Dice-rolling program using an array instead of a switch. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Roll a Six-Sided Die 6000 Times</title> 
+      <style type = "text/css">
+         table { width: 15em }
+         th    { text-align: left }
+      </style>
+      <script type = "text/javascript">        
+         <!--
+         var face; 
+         var frequency =  new Array(6); //[0, 0, 0, 0, 0, 0 ]; // leave frequency[0] 
+                                                 // uninitialized
+   		
+   		// Initialize the array with zero.
+   		for (var i = 0; i < 6; ++i) 
+   			frequency [i] = 0;
+   		
+         // summarize results
+         for ( var roll = 0; roll < 6000; ++roll )    
+         {                                             
+            face = Math.floor( 1 + Math.random() * 6 );
+            ++frequency[ face -1 ];                       
+         } // end for                                             
+
+         document.writeln( "<table border = \"1\"><thead>" );
+         document.writeln( "<th>Face</th>" +  
+            "<th>Frequency</th></thead><tbody>" );
+                     
+         // generate entire table of frequencies for each face
+         for ( face = 0; face < frequency.length; ++face )      
+            document.writeln( "<tr><td>" + ( face+1) + "</td><td>" + 
+               frequency[ face ] + "</td></tr>" );              
+     
+         document.writeln( "</tbody></table>" );
+         // -->
+      </script>
+   </head>
+   <body>
+      <p>Click Refresh (or Reload) to run the script again</p>
+   </body>
+</html>

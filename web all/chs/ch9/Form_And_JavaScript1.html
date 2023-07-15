@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+function displaySum ()
+{
+	var firstNumber, secondNumber, sum;
+	firstNumber=parseFloat(document.getElementById("f1").t1.value);
+	secondNumber=parseFloat(document.getElementById("f1").t2.value);
+	sum=firstNumber + secondNumber;
+	document.getElementById("f1").t3.value=sum;
+}
+
+</script>
+</head>
+<body>
+	<form name="f1" action="" id="f1">
+		<input type="text" name="t1"/></br>
+		<input type="text" name="t2"/></br>
+		<input type="text" name="t3"/></br>
+		
+		<input type="button"  value="calculate" onclick=displaySum() />
+	</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 10.7: RandomPicture2.html -->
+<!-- Random image generation using arrays. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Random Image Generator</title> 
+      <style type = "text/css">
+         table { width: 15em }
+         th    { text-align: left }
+      </style>	
+      <script type = "text/javascript">
+         <!--
+         var pictures =                                           
+            [ "1.jpg", "2.jpg", "nTierArc.jpg", "cis1111.jpg", "PERF.jpg", "PORT.jpg", "SEO.jpg" ];
+
+         // pick a random image from the pictures array and displays by
+         // creating an img tag and appending the src attribute to the 
+         // filename
+         document.write ( "<img src = \"" +                             
+            pictures[ Math.floor( Math.random() * 7 ) ] + "\" />" );
+         // -->
+      </script>
+   </head>
+   <body>
+      <p>Click Refresh (or Reload) to run the script again</p>
+   </body>
+</html>

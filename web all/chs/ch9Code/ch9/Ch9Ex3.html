@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 9.4: RandomInt.html -->
+<!-- Random integers, shifting and scaling. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Shifted and Scaled Random Integers</title>
+	      <style type = "text/css">
+	         table { width: 50%;
+	                 border: 1px solid gray;
+	                 text-align: center }
+	      </style>
+	      <script type = "text/javascript">
+	         <!--
+	         var value;
+	
+	         document.writeln( "<table>" );
+	         document.writeln( "<caption>Random Numbers</caption><tr>" );
+	      
+	         for ( var i = 1; i <= 20; i++ ) 
+	         {
+	            value = Math.floor( 1 + Math.random() * 6 );
+	            document.writeln( "<td>" + value + "</td>" );
+
+            // start a new table row every 5 entries
+            if ( i % 5 == 0 && i != 20 )
+               document.writeln( "</tr><tr>" );
+         } // end for
+
+         document.writeln( "</tr></table>" );
+         // -->
+      </script>
+   </head>
+   <body>
+      <p>Click Refresh (or Reload) to run the script again</p>
+   </body>
+</html>
+

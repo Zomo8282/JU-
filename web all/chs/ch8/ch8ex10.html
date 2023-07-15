@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 8.14: ContinueLabelTest.html -->
+<!-- Labeled continue statement in a nested for statement. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Using the continue Statement with a Label</title>
+      <script type = "text/javascript">
+         <!--
+         nextRow: // target label of continue statement
+            for ( var row = 1; row <= 5; ++row )
+            {
+               document.writeln( "<br />" );
+	
+               for ( var column = 1; column <= 10; ++column )
+               {
+                  if ( column > row )
+                     continue nextRow; // next iteration of labeled loop
+	   
+                  document.write( "* " );
+               } //end for
+            } //end for
+         // -->
+      </script>
+   </head><body></body>
+</html>
+

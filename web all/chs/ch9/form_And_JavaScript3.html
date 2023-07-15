@@ -1,0 +1,57 @@
+<html>
+
+	<head>
+
+		<script type="text/javascript">
+
+			function calc()
+			{
+				var Q1= parseInt(document.getElementById("f1").T4.value);
+				var Q2= parseInt(document.getElementById("f1").T5.value);
+				var Q3= parseInt(document.getElementById("f1").T6.value);
+				var JavaPrice=cPrice=XHTMLprice=0;
+				
+				if (document.getElementById("f1").C1.checked)
+					JavaPrice=Q1 * 20.99;
+				if (document.getElementById("f1").C2.checked)
+					cPrice=Q2 * 15.5 ;
+				if (document.getElementById("f1").C3.checked)
+					XHTMLprice= Q3 * 23.99;
+
+				var total= JavaPrice + cPrice + XHTMLprice;
+
+				document.getElementById("f1").T7.value=total;
+				
+				document.getElementById('foo').innerHTML = 
+						"<br /><br /><strong>Total cost is: "+total.toFixed(2)+"</strong>";
+
+			}
+		</script>
+	</head>
+	<body>
+
+		<h1>OnLine BookShop items</h1>
+		<p>Check the book you want and enter the needed quantity</p>
+		<form id="f1"action="">
+
+			<input type="checkbox" name="C1" />C++ &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" name="T4" size="3" /> </br>
+
+			<input type="checkbox" name="C2" />Java &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" name="T5" size="3" /> </br>
+
+			<input type="checkbox" name="C3" />XHTML &nbsp;
+			<input type="text" name="T6" size="3" /> </br>
+
+			<input name="B1" type="button" onclick=calc() value="Total Cost" />
+			<input type="text" name="T7" size="20" />&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="Clear all" name="B2" />
+		
+		<div id="foo" style="width:50%;height:30%;position:relative;
+		  top:20px;left:300px;text-align:center;background-color:gray">
+  			
+			<strong>You have no items in your shopping cart...</strong>
+		</div>
+
+	</body>
+</html>

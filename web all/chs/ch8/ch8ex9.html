@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 8.13: BreakLabelTest.html -->
+<!-- Labeled break statement in a nested for statement. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Using the break Statement with a Label</title>
+      <script type = "text/javascript">
+         <!--
+         stop: { // labeled block
+            for ( var row = 1; row <= 10; ++row )
+            {
+               for ( var column = 1; column <= 5 ; ++column )
+               {
+                 
+
+                  document.write( "* " );
+               } //end for
+
+               document.writeln( "<br />" );
+            } //end for
+
+            // the following line is skipped
+         }
+          // end block labeled stop
+
+         
+      </script>
+   </head><body></body>
+</html>
+

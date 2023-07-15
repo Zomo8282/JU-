@@ -1,0 +1,123 @@
+<html>
+<head><title>New input types for HTML 5</title>
+<script src="modernizr.js"></script>
+<script>
+	function myFirstLoop()
+	{
+		var total = 0;    // Set total to zero 
+		var counter = 0;  // Set grade counter to zero 
+		var passes = 0;   //Initialize passes to zero 
+		var failures = 0; // Initialize failures to zero
+		//Input the first grade (possibly the sentinel)
+		var grade = window.prompt ("Enter the next grade (-1 to end): ");
+		var nextGrade = parseInt(grade);
+
+		//While grade counter is less than or equal to ten 
+		while ( nextGrade != -1 )
+		{			
+			if ( nextGrade >= 60 ) //If the student passed 
+				passes = passes + 1; //Add one to passes 
+			else 
+				failures = failures + 1; //Add one to failures
+
+			//Add the grade into the total 
+			total += nextGrade;  // total = total + nextGrade;
+			
+			//Add one to the grade counter 
+			++counter;  // counter += 1  OR counter = counter + 1;
+
+			//Input the next grade 
+			grade = window.prompt ("Enter the next grade (-1 to end): ");
+			nextGrade = parseInt(grade);
+		}
+		
+		
+		//If the counter is not equal to zero
+		if ( counter > 0 )
+		{
+			//Set the class average to the total divided by ten ten
+			var classAverage = total / counter;
+			window.alert ("The Class Average is: " + classAverage);
+
+			window.alert ( "The number of passes is " + passes + " and the number of failures is " + failures);
+			
+			if (passes > 8)
+				window.alert ("Raise Tuition");
+		}
+		else
+		{
+			alert ("No Grades were entered");
+		}
+	}
+
+	function test()
+	{
+		if (Modernizr.inputtypes.date)
+			alert ("Supports input type DATE");
+		else
+			alert ("DOES NOT support input type DATE");
+
+		if (Modernizr.inputtypes.placeholder)
+			alert ("Supports input type placeholder");
+		else
+			alert ("DOES NOT support input type placeholder");
+
+		if (Modernizr.inputtypes.autofocus)
+			alert ("Supports autofocus");
+		else
+		{
+			alert ("DOES NOT support autofocus");
+			alert ("Upgrade your browswer!");
+		}
+		
+		//CIS 111 Chapter 7a JavaScript Control Structures by BobTimlin.com
+	}
+</script>
+</head>
+
+<body>
+	<p><input type='button' value='My First Loop' onclick='myFirstLoop()' /> </p>
+	<p><input type='button' value='Test' onclick='test()' /> </p>
+	<p><a href='http://bit.ly/9mQt5C'>Search:</a><input type='search' /> </p>
+	<p><a href='http://bit.ly/aPZHjD'>Number:</a> <input type='number' /> </p>
+	<p><a href='http://bit.ly/dmLiRr'>range:</a> <input type='range' /> </p>
+	<p><a href='http://bit.ly/bwRcMO'>color:</a> <input type='color' /> </p>
+	<p><a href='http://bit.ly/amkWLq'>Phone #:</a> <input type='tel' /> </p>
+	<fieldset>
+ <p><legend>Add Meeting</legend>
+ <p><label>Meeting name: <input type=text name="meeting.label"></label>
+ <p><label>Meeting time: <input type=datetime name="meeting.start"></label>
+</fieldset>
+</p>
+<fieldset>
+ <legend>Destination</legend>
+ <p><label>Airport: <input type=text name=to list="airports"></label></p>
+ <p><label>Departure time: <input type=datetime-local name=totime step=3600></label></p>
+</fieldset>
+<datalist id="airports">
+ <option value=ATL label="Atlanta">
+ <option value=MEM label="Memphis">
+ <option value=LHR label="London Heathrow">
+ <option value=LAX label="Los Angeles">
+ <option value=FRA label="Frankfurt">
+</datalist>
+	<p><a href='http://bit.ly/cjKb3a'>URL:</a> <input type="url" name="location" list="urls" >
+<datalist id="urls">
+ <option label="MIME: Format of Internet Message Bodies" value="http://tools.ietf.org/html/rfc2045">
+ <option label="HTML 4.01 Specification" value="http://www.w3.org/TR/html4/">
+ <option label="Form Controls" value="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-hint">
+ <option label="Scalable Vector Graphics (SVG) 1.1 Specification" value="http://www.w3.org/TR/SVG/">
+ <option label="Feature Sets - SVG 1.1 - 20030114" value="http://www.w3.org/TR/SVG/feature.html">
+ <option label="The Single UNIX Specification, Version 3" value="http://www.unix-systems.org/version3/">
+</datalist>
+	</p>
+	<p><a href='http://bit.ly/aaDrgS'>Email:</a> <input type='email' /> </p>
+	<p><a href='http://bit.ly/c8hL58'>Date:</a> <input type='date' /> </p>
+	<p><a href='http://bit.ly/cDgHRI'>Month:</a> <input type='month' /> </p>
+	<p><a href='http://bit.ly/bR3r58'>Week:</a> <input type='week' /> </p>
+	<p><a href='http://bit.ly/bfMCMn'>Time:</a> <input type='time' /> </p>
+	<p><a href='http://bit.ly/c46zVW'>DateTime:</a> <input type='datetime' /> </p>
+	<p><a href='http://bit.ly/aziNkE'>Local DateTime:</a> <input type='datetime-local' /> </p>
+
+</body>
+</html>
